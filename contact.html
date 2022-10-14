@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Contact Us</title>
+  <link rel="shortcut icon" type="image/x-icon" href="images\pngegg.png" />
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <!--<link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">-->
+  <!--<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">-->
+  <link rel="stylesheet" type="text/css" href="contact.css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    function alphaOnly(event) {
+      var key = event.keyCode;
+      return ((key >= 65 && key <= 90) || key == 8 || key == 32);
+    };
+  </script>
+
+  <style>
+    body {
+      background-color: #8e74dd;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to bottom, #78c7ee, #8e74dd);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to bottom, #78c7ee, #8e74dd);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
+    .contact-form {
+
+      background-color: #d0d1d3;
+
+
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+
+      <!-- <a class="navbar-brand js-scroll-trigger" href="index.php" style="margin-top: 50px;margin-left:-265px;font-family: Times;"></a> -->
+      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item" style="margin-right: -100px;margin-top: 120px;">
+            <a class="nav-link js-scroll-trigger" href="index.php" style="color: white;font-family: Times;">
+              <h6>HOME</h6>
+            </a>
+          </li>
+
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="row">
+    <div class="col-md-3" style="margin-top: 12%;right: -7%; text-align: center; color: rgb(255, 255, 255); font-family: Times;">
+      <img src="images/pngegg.png" alt="" style="width: 45%;"/>
+      <h3>Arogya Hospital</h3>
+    </div>
+
+    <div class="container contact-form col-md-5" style="font-family: Times; height: 400px; margin-bottom: 18.1%; margin-top: 10%;">
+      <h3 style="margin-top: 5%; margin-bottom: -5%">Drop Us a Message</h3>
+
+      <form method="post" action="contact.php">
+        
+        <div class="row">
+          <div class="col-md-9" style="margin-top: -15%; margin-left: -30%">
+            <div class="form-group">
+              <input type="text" name="txtName" class="form-control" placeholder="Name " value=""
+                onkeydown="return alphaOnly(event);" required />
+            </div>
+            <div class="form-group">
+              <input type="email" name="txtEmail" class="form-control" placeholder="Email " value="" required />
+            </div>
+            <div class="form-group">
+              <input type="tel" name="txtPhone" class="form-control" placeholder="Contact No. " value="" minlength="10"
+                maxlength="10" required />
+            </div>
+            
+          </div>
+          <div class="col-md-9" style="margin-top: -15%; margin-right: -50%">
+            <div class="form-group" >
+              <textarea name="txtMsg" class="form-control" placeholder="Write Your Message "
+                style="width: 120%; height: 150px;" required></textarea>
+            </div>
+            <div class="form-group" style="margin-right: 42%;">
+              <input type="submit" name="btnSubmit" class="btnContact" value="Submit" />
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+
+</body>
+
+</html>
